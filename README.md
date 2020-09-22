@@ -1,2 +1,2 @@
 # ProyectoRecetasMundiales
-Proyecto final para desarrollo de aplicaciones moviles
+Proyecto final para desarrollo de aplicaciones moviles.
