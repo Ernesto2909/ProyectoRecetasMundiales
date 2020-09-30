@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MiTabHost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Principal">
+   >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:background="#CCEAED"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            app:srcCompat="@drawable/pupusas">
+
+
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pupusas"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold|italic">
+
+        </TextView>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <!--tab para Desayunos-->
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B5D8E8"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El desayuno es considerado la comida más importante del día ya que, después de muchas horas de descanso, activa nuestro metabolismo y sirve para reponer los minerales y vitaminas que nuestro organismo ha utilizado mientras dormíamos"
+                    android:textAlignment="center"
+                    android:textStyle="italic">
+
+                </TextView>
+                <TableLayout
+                    android:id="@+id/lytTablaPesos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <TableRow>
+
+                        <Button android:foreground="@drawable/pupusas">
+
+                        </Button>
+
+                        <Button android:foreground="@drawable/hotcakes">
+
+                        </Button>
+
+                        <Button android:foreground="@drawable/frijoles">
+
+                        </Button>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Pupusas"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtparakilos"
+                            android:text="HotCakes"
+
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtparaki"
+                            android:text="Frijoles"
+
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="libras"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/txtparalibras"
+                            android:text="textoResultado"
+                            android:textColor="#427508"
+                            android:textSize="20dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="toneladas"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/txtparatoneladas"
+                            android:text="textoResultado"
+                            android:textColor="#427508"
+                            android:textSize="20dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#044E47"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <LinearLayout
+                    android:id="@+id/LytControles2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnConvertirTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="convertirTemp"
+                    android:text="Convertir" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B0CA92"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <LinearLayout
+                    android:id="@+id/LytControles3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnConvertirLongitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ConvertirLongitud"
+                    android:text="Convertir" />
+
+                <TableLayout
+                    android:id="@+id/lytTablaLongitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+
+                </TableLayout>
+
+
+            </LinearLayout>
+
+            <!--tab para unidades de temperatura-->
+
+            <!--tab para unidades de longitud-->
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</TabHost>
